@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" theme="first">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./images/Calc-Logo.webp" type="image/icon type">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./theme.css">
+  <title id="root-title">Calculator</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <header class="top">
+      <div class="top-left_title">
+        <h1 class="title">calc</h1>
+      </div>
+      <div class="top-right_theme">
+        <div class="theme-text_div">
+          <h1 class="theme-text">THEME</h1>
+        </div>
+        <div class="switcher_div">
+          <div class="switcher">
+            <div class="checkbox-labels">
+              <label for="checkbox1">1</label>
+              <label for="checkbox2">2</label>
+              <label for="checkbox3">3</label>
+            </div>
+            <div class="checkbox-indicator">
+              <input type="radio" name="theme" id="checkbox1" value="first" checked>
+              <input type="radio" name="theme" id="checkbox2" value="second">
+              <input type="radio" name="theme" id="checkbox3" value="thirty">
+              <div class="disc"></div>
+            </div>
+          </div>
+        </div>
+    </header>
+    <section>
+      <div class="display">
+        <input type="text" id="display" maxlength="21" value="0" disabled>
+      </div>
+      <div class="keyword">
+        <div class="inKeyword">
+          <div class="keys">
+            <button class="btn btns-color-white btn-numbers">7</button>
+            <button class="btn btns-color-white btn-numbers">8</button>
+            <button class="btn btns-color-white btn-numbers">9</button>
+            <button class="btn del">DEL</button>
+            <button class="btn btns-color-white btn-numbers">4</button>
+            <button class="btn btns-color-white btn-numbers">5</button>
+            <button class="btn btns-color-white btn-numbers">6</button>
+            <button class="btn btns-color-white operator" data-operator="+">+</button>
+            <button class="btn btns-color-white btn-numbers">1</button>
+            <button class="btn btns-color-white btn-numbers">2</button>
+            <button class="btn btns-color-white btn-numbers">3</button>
+            <button class="btn btns-color-white operator" data-operator="-">-</button>
+            <button class="btn btns-color-white decimal">.</button>
+            <button class="btn btns-color-white btn-numbers">0</button>
+            <button class="btn btns-color-white operator" data-operator="/">/</button>
+            <button class="btn btns-color-white operator" data-operator="x">x</button>
+            <button class="btn reset">RESET</button>
+            <button class="btn equal">=</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body_bgc);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    outline: none;
+}
+
+.container {
+    max-width: 540px;
+    margin: 0 auto;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: -0.533333px;
+    color: var(--top_title);
+    cursor: default;
+}
+
+.top-right_theme {
+    display: flex;
+    gap: 21px;
+}
+
+.theme-text_div {
+    display: flex;
+    align-items: flex-end;
+}
+
+.theme-text {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: var(--top_title);
+}
+
+.switcher {
+    width: 71px;
+    background-color: transparent;
+}
+
+.checkbox-labels {
+    display: flex;
+    justify-content: space-around;
+}
+
+.checkbox-labels>label {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 13px;
+    text-align: center;
+    color: var(--top_title);
+}
+
+.checkbox-indicator {
+    height: 26px;
+    background-color: var(--background-bgc-btns);
+    border-radius: 13px;
+    position: relative;
+}
+
+.checkbox-indicator>input {
+    width: calc(100% / 3);
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    appearance: none;
+}
+
+#checkbox1 {
+    left: 0;
+}
+
+#checkbox2 {
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#checkbox3 {
+    right: 0;
+}
+
+.disc {
+    position: absolute;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--switcher);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+#checkbox1:checked~.disc {
+    left: 5px;
+    transform: translate(0, -50%);
+}
+
+#checkbox2:checked~.disc {
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#checkbox3:checked~.disc {
+    left: calc(100% - 5px);
+    transform: translate(-100%, -50%);
+}
+
+section {
+    max-width: 540px;
+}
+
+.display {
+    width: 100%;
+    padding: 32px 0 24px 0;
+}
+
+.display>input[type="text"] {
+    font-family: 'League Spartan', sans-serif;
+    width: 100%;
+    height: 100%;
+    padding: 38px 32px 36px;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 54px;
+    text-align: right;
+    letter-spacing: -0.8px;
+    border-radius: 10px;
+    color: var(--top_title);
+    background-color: var(--top-input);
+    caret-color: transparent;
+}
+
+.keyword {
+    background: var(--background-bgc-btns);
+    border-radius: 10px;
+}
+
+.inKeyword {
+    padding: 32px 32px 30px;
+}
+
+.keys {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.btn {
+    width: 101px;
+    height: 64px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: -0.533333px;
+
+    background: var(--bgc-btns);
+    box-shadow: inset 0px -4px 0px var(--box-shadow-numerBtn);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 100.8ms;
+}
+
+.btns-color-white {
+    color: var(--color-btns);
+}
+
+.reset, .equal {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: -0.333333px;
+}
+
+.reset, .del {
+    background: var(--del-recet);
+    box-shadow: inset 0px -4px 0px var(--box-shadow-del-reset);
+    border-radius: 10px;
+    color: var(--recet-color);
+}
+
+.reset, .equal {
+    width: 226px;
+    height: 64px;
+}
+
+.equal {
+    background: var(--switcher);
+    box-shadow: inset 0px -4px 0px var(--box-shadow-switcher);
+    border-radius: 10px;
+    color: var(--equal-color);
+}
+
+.disc:hover {
+    background-color: var(--switcher_hover);
+}
+
+.equal:hover {
+    background-color: var(--switcher_hover);
+}
+
+.btns-color-white:hover {
+    background-color: var(--bgc-color_hover);
+}
+
+.del:hover {
+    background-color: var(--del-recet_hover);
+}
+
+.reset:hover {
+    background-color: var(--del-recet_hover);
+}
